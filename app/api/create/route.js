@@ -13,7 +13,7 @@ export async function POST(request) {
 const token = serverClient.createToken(user.data.id);
 // console.log(token)
     // console.log(body)
-    console.log("a new user created", token)
+    // console.log("a new user created", token)
     const client = await clerkClient()
     await serverClient.upsertUser({id: user.data.id})
     await client.users.updateUserMetadata(user.data.id, {
