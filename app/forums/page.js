@@ -18,7 +18,7 @@ const topics = [
     },
     {
         text: "swift",
-        img: "/images/swift.png",
+        img: "/images/Swift.png",
         desc: "Delve into Swift, Apple's language for iOS and macOS development.",
         slug: "swift-development-new"
     },
