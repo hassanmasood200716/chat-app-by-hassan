@@ -30,14 +30,15 @@ const token = serverClient.createToken(user.data.id);
         "csharp-discuss-new",
         "html-css-talk-new"
     ]
-    slugs.forEach(async(item)=>{
-        const channel = serverClient.channel('messaging', item, {
-            image: 'https://getstream.io/random_png/?name=react',
-            name: item.toUpperCase(),
-            created_by_id: user.data.id
-          });
-          await channel.create()
-          channel.addMembers([user.data.id]) 
-    })
+    for (const item of slugs) {
+      const channel = serverClient.channel('messaging', item, {
+          image: 'https://getstream.io/random_png/?name=react',
+          name: item,
+          created_by_id: user.data.id
+      });
+
+      await channel.create();
+      await channel.addMembers([user.data.id]);
+  }
     return Response.json({ message: 'Hello World' })
   }
