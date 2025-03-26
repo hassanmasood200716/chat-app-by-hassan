@@ -5,7 +5,7 @@ export default function Home() {
     <>
       <Head>
         <title>PieChat - Connect with the World</title>
-        <meta name="description" content="PieChat is your go-to chat app for seamless communication." />
+        <meta name="description" content="PieChat by us is your go-to chat app for seamless communication." />
         <link rel="icon" href="/favicon.ico" />
       </Head>
       
